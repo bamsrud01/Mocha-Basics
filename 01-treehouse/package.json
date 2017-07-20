@@ -1,0 +1,17 @@
+{
+  "name": "01-treehouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chaiBasics.js",
+  "dependencies": {
+    "chai": "^4.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
