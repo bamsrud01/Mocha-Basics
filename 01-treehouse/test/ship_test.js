@@ -1,7 +1,7 @@
 //  Import from chai
 const expect = require('chai').expect;
 
-//  Test function to check for ship at coordinates
+//  checkForShip test suite
 describe('checkForShip', function() {
   const checkForShip = require('../game_logic/ship_methods').checkForShip;
 
@@ -56,5 +56,22 @@ describe('checkForShip', function() {
     expect(checkForShip(player, [1, 1])).to.be.true;
     expect(checkForShip(player, [2, 3])).to.be.true;
     expect(checkForShip(player, [9, 9])).to.be.false;
+  });
+});
+
+//  damageShip test suite
+describe('damageShip', function() {
+  const damageShip = require('../game_logic/ship_methods').damageShip;
+
+  it('should register damage on a given ship at a given location', function() {
+    let ship = {
+      location: [[0, 0]],
+      damage: []
+    };
+
+    damageShip(ship, [0, 0]);
+
+    expect(ship.damage).to.not.be.empty;
+    expect(ship.damage[0]).to.deep.equal([0, 0]);
   });
 });
