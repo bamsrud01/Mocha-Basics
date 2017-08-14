@@ -46,6 +46,18 @@ function placeShip (player, ship, startingCoordinates, direction) {
   }
 }
 
+function getRandomCoordinates() {
+  var x = Math.floor(Math.random() * 9);
+  var y = Math.floor(Math.random() * 9);
+  return [x, y];
+}
+
+function getRandomDirections() {
+  return Math.random() > 0.5
+    ? 'horizontal'
+    : 'vertical';
+}
+
 module.exports = {
   placeShip: placeShip,
   validateLocations: validateLocations,
