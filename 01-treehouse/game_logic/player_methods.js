@@ -21,6 +21,7 @@ function validateLocations (player, locations) {
 }
 
 function placeShip (player, ship, startingCoordinates, direction) {
+  if (!direction) throw Error('You did not provide a direction!');
   var proposedLocations = [];
   var previousLocation,
     rowNumber,
