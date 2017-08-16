@@ -126,12 +126,5 @@ describe('COMPUTER PLAYER', function () {
         ]
       };
     });
-
-    it('should aim at a random location', function () {
-      var ship = player.ships[0];
-
-      computerFire();
-//      expect(ship.damage).to.have.length(1) || expect(ship.damage).to.be.empty
-    });
   });
 });
